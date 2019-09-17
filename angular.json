@@ -6,8 +6,8 @@
     "hybrid-app": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
+        "@nativescript/schematics:component": {
+          "styleext": "scss"
         }
       },
       "root": "",
@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hybrid-app"
+    }
+  },
+  "defaultProject": "hybrid-app",
+  "cli": {
+    "defaultCollection": "@nativescript/schematics"
+  }
 }
