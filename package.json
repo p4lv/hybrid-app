@@ -2,11 +2,11 @@
   "name": "hybrid-app",
   "nativescript": {
     "id": "org.nativescript.hybridapp",
-    "tns-ios": {
-      "version": "6.1.0"
-    },
     "tns-android": {
       "version": "6.1.2"
+    },
+    "tns-ios": {
+      "version": "6.1.1"
     }
   },
   "version": "0.0.0",
