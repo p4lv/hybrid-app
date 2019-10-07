@@ -8,6 +8,9 @@
       "schematics": {
         "@nativescript/schematics:component": {
           "styleext": "scss"
+        },
+        "@schematics/angular:component": {
+          "styleext": "scss"
         }
       },
       "root": "",

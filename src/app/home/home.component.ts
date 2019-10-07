@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this._title = 'hybrid-app';
+    this._title = 'Hybrid Application';
   }
 
   get title() {
