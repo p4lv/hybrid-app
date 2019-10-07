@@ -37,7 +37,7 @@
     "nativescript-theme-core": "~1.0.4",
     "reflect-metadata": "~0.1.12",
     "rxjs": "~6.5.3",
-    "tns-core-modules": "~6.1.0",
+    "tns-core-modules": "^6.1.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
@@ -59,7 +59,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
-    "nativescript-dev-webpack": "^1.2.0",
+    "nativescript-dev-webpack": "^1.2.1",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
