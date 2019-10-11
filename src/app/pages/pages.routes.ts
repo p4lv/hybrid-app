@@ -8,6 +8,6 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('@src/app/home/home.module').then(mod => mod.HomeModule),
+    loadChildren: () => import('@src/app/pages/home/home.module').then(mod => mod.HomeModule),
   },
 ];
