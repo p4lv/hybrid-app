@@ -1,0 +1,18 @@
+<ng-container *ngIf="user && user.id">
+  <ng-container *ngIf="isGuest() else authUser">
+    <h1>Hi Guest, please login to user our service</h1>
+    <button (click)="handleLoginClick()">
+      Login
+    </button>
+  </ng-container>
+  <ng-template #authUser>
+    <h1>Hello {{user.name}}</h1>
+    <p>login works!</p>
+    <button (click)="handleLogoutClick()">
+      Logout
+    </button>
+  </ng-template>
+</ng-container>
+
+<h2 *ngIf="isUserLoading() | async">loading...</h2>
+
