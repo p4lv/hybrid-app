@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnIni
 import { AuthService } from '@src/app/services/auth/auth.service';
 import { AuthUser, AuthUserType } from '@src/app/services/auth/auth-user.model';
 import { Observable, Subscription } from 'rxjs';
+import { LoginService } from '@src/app/pages/login/login.service';
 
 @Component({
   selector: 'hap-login',
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   constructor(
     private authService: AuthService,
+    private loginService: LoginService,
     private changeDetector: ChangeDetectorRef,
   ) {
   }
@@ -36,6 +38,14 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   public isUserLoading(): Observable<boolean> {
     return this.authService.isLoading;
+  }
+
+  handleGetProfileClick() {
+    this.loginService.profile.subscribe(
+      profile => {
+        console.log(profile);
+      }
+    );
   }
 
   handleLoginClick(): void {
