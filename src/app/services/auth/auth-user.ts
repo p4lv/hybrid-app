@@ -4,11 +4,11 @@ export const Guest: AuthUser = new AuthUser(
   '',
   '0',
   'Guest Avo',
-  AuthUserType.Guest,
+  AuthUserType.guest,
 );
 export const Unknown: AuthUser = new AuthUser(
   '',
   '0',
   'Don T. Know',
-  AuthUserType.Unknown,
+  AuthUserType.unknown,
 );

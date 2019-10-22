@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       `testmail-${rand}@somemail.test`,
       rand.toString(),
       `Test User ${rand}`,
-      AuthUserType.Auth
+      AuthUserType.auth
     );
     this.authService.login(user);
   }
@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   public isGuest(): boolean {
-    return this.user.type === AuthUserType.Guest;
+    return this.user.type === AuthUserType.guest;
   }
 
   private handleUserChange(user: AuthUser): void {

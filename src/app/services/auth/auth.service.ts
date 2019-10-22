@@ -26,7 +26,7 @@ export class AuthService implements OnDestroy {
     );
 
     this.authUser.pipe(delay(5000)).subscribe(user => {
-      if (user.type !== AuthUserType.Guest) {
+      if (user.type !== AuthUserType.guest) {
         this.logout();
       }
     });
@@ -70,7 +70,7 @@ export class AuthService implements OnDestroy {
   }
 
   private getLocalUser(): Observable<AuthUser | null> {
-    const authUser = new AuthUser('autologin@user.net', '2543', 'Autos Loginov', AuthUserType.Auth);
+    const authUser = new AuthUser('autologin@user.net', '2543', 'Autos Loginov', AuthUserType.auth);
     return of(authUser).pipe(delay(2000));
   }
 

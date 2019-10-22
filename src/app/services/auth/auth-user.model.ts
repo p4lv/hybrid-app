@@ -9,7 +9,7 @@ export class AuthUser {
 }
 
 export enum AuthUserType {
-  Unknown = 'unknown',
-  Guest = 'guest',
-  Auth = 'auth',
+  unknown = 'unknown',
+  guest = 'guest',
+  auth = 'auth',
 }
