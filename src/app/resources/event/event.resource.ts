@@ -5,6 +5,7 @@ import {switchMap} from 'rxjs/operators';
 
 import {environment} from '@src/environments/environment';
 import {deserialize as deserializeEvent, ResponseInterface} from '@src/app/resources/event/event-get.mapper';
+import {serialize as serializeEvent} from '@src/app/resources/event/event-post.mapper';
 import {Event} from '@src/app/resources/event/event.model';
 
 
@@ -30,5 +31,10 @@ export class EventResource {
           return EventResource.deserialize(response);
         })
       );
+  }
+
+  public attend(id: number, attender: any): Observable<any> {
+    const href = `${environment.api}/happening/${id}`;
+    return this.http.post(href, serializeEvent(attender));
   }
 }

@@ -3,6 +3,7 @@ import { AuthService } from '@src/app/services/auth/auth.service';
 import { AuthUser, AuthUserType } from '@src/app/services/auth/auth-user.model';
 import { Observable, Subscription } from 'rxjs';
 import { LoginService } from '@src/app/pages/login/login.service';
+import {EventResource} from '@src/app/resources/event/event.resource';
 
 @Component({
   selector: 'hap-login',
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     private authService: AuthService,
     private loginService: LoginService,
     private changeDetector: ChangeDetectorRef,
+    private eventResource: EventResource,
   ) {
   }
 
