@@ -26,9 +26,17 @@ export class LoginService {
         this.profileSubject.next(profile);
       }
     );
-    this.eventResource.getEvent(1).subscribe(
+    this.eventsResource.getEvents().subscribe(
       events => {
         console.log(events);
+      }
+    );
+    this.eventResource.getEvent(1).subscribe(
+      event => {
+        console.log(event);
+      },
+      error => {
+        console.log(error);
       }
     );
   }
