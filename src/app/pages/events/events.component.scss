@@ -1,0 +1,34 @@
+@import "app-variables";
+.loader {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.event-card {
+  width: $max-site-width;
+  max-width: 100%;
+  margin-bottom: 35px;
+}
+
+.event-header-image {
+  background-size: cover;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fill-remaining-width {
+  flex: 1 1 auto;
+}

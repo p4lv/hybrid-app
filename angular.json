@@ -26,6 +26,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/style-includes"
+              ]
+            },
             "assets": [
               "src/favicon.ico",
               "src/assets"

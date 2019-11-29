@@ -1,8 +1,10 @@
- 
+
 // Import the theme’s variables. If you’re using a color scheme
 // other than “light”, switch the path to the alternative scheme,
 // for example '~nativescript-theme-core/scss/dark'.
-@import '~nativescript-theme-core/scss/light';
+@import '../../node_modules/nativescript-theme-core/scss/light';
 
 // Place any custom variables here. For example:
 // $page-content-placeholder-font-size: 20;
+
+$max-site-width: 400px;
