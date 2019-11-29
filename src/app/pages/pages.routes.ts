@@ -1,9 +1,9 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/events',
     pathMatch: 'full',
   },
   {
@@ -13,5 +13,9 @@ export const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('@src/app/pages/login/login.module').then(mod => mod.LoginModule),
+  },
+  {
+    path: 'events',
+    loadChildren: () => import('@src/app/pages/events/events.module').then(m => m.EventsModule),
   },
 ];
