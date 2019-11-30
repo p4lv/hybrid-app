@@ -7,5 +7,9 @@
 ></mat-progress-bar>
 <h1>Open for registration events:</h1>
 <ng-container *ngIf="!(eventsLoading | async)">
-  <bjk-event-card class="event-card" *ngFor="let eventCard of events;" [card]="eventCard"></bjk-event-card>
+  <bjk-event-card *ngFor="let eventCard of events;"
+                  class="event-card"
+                  [card]="eventCard"
+                  [attr.id]="eventCard.id"
+  ></bjk-event-card>
 </ng-container>
