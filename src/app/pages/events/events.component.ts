@@ -5,7 +5,7 @@ import {EventsService} from '@src/app/pages/events/events.service';
 import {Event} from '@src/app/resources/events/events.model';
 
 @Component({
-  selector: 'hap-events',
+  selector: 'bjk-events',
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

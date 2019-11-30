@@ -1,0 +1,34 @@
+<mat-card class="event-card">
+  <mat-card-header>
+    <div mat-card-avatar class="event-header-image"
+         [ngStyle]="{
+              'background-image': 'url(https://picsum.photos/200/100?'+card.id+')'
+           }"
+    ></div>
+    <mat-card-title>{{card.title}}</mat-card-title>
+    <mat-card-subtitle class="event-header-subtitle">
+      <mat-icon aria-hidden="false" aria-label="Start Date">access_time</mat-icon>
+      <time [dateTime]="card.startDate.date | date:'yyyy-MM-dd HH:mm'">
+        {{card.startDate.date | date: 'dd.MM.yyyy HH:mm'}}
+      </time>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://picsum.photos/200/100?{{card.id}}" alt="">
+  <mat-card-content>
+    {{card.description}}
+  </mat-card-content>
+  <mat-card-actions class="card-actions">
+    <button mat-raised-button color="primary">Apply</button>
+    <span class="fill-remaining-width"></span>
+    <mat-icon aria-hidden="false" aria-label="Start Date">access_time</mat-icon>
+    &mdash;
+    <span class="event-date">
+        <time [dateTime]="card.startDate.date | date:'yyyy-MM-dd HH:mm'">
+          {{card.startDate.date | date: 'dd.MM.yyyy HH:mm'}}
+        </time>
+        <time [dateTime]="card.endDate.date | date:'yyyy-MM-dd HH:mm'">
+          {{card.endDate.date | date: 'dd.MM.yyyy HH:mm'}}
+        </time>
+      </span>
+  </mat-card-actions>
+</mat-card>

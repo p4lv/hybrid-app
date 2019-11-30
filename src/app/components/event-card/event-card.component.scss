@@ -1,0 +1,24 @@
+.event-header-image {
+  background-size: cover;
+}
+
+.event-header-subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fill-remaining-width {
+  flex: 1 1 auto;
+}
+
+.event-date {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}

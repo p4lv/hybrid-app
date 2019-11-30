@@ -7,38 +7,5 @@
 ></mat-progress-bar>
 <h1>Open for registration events:</h1>
 <ng-container *ngIf="!(eventsLoading | async)">
-  <mat-card class="event-card" *ngFor="let eventCard of events; let i = index">
-    <mat-card-header>
-      <div mat-card-avatar class="event-header-image"
-           [ngStyle]="{
-              'background-image': 'url(https://picsum.photos/200/100?'+i+')'
-           }"
-      ></div>
-      <mat-card-title>{{eventCard.title}}</mat-card-title>
-      <mat-card-subtitle class="event-header-subtitle">
-        <mat-icon aria-hidden="false" aria-label="Start Date">access_time</mat-icon>
-        <time [dateTime]="eventCard.startDate.date | date:'yyyy-MM-dd HH:mm'">
-          {{eventCard.startDate.date | date: 'dd.MM.yyyy HH:mm'}}
-        </time>
-      </mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://picsum.photos/200/100?{{i}}" alt="">
-    <mat-card-content>
-      {{eventCard.description}}
-    </mat-card-content>
-    <mat-card-actions class="card-actions">
-      <button mat-raised-button color="primary">Apply</button>
-      <span class="fill-remaining-width"></span>
-      <mat-icon aria-hidden="false" aria-label="Start Date">access_time</mat-icon>
-      &mdash;
-      <span class="event-date">
-        <time [dateTime]="eventCard.startDate.date | date:'yyyy-MM-dd HH:mm'">
-          {{eventCard.startDate.date | date: 'dd.MM.yyyy HH:mm'}}
-        </time>
-        <time [dateTime]="eventCard.endDate.date | date:'yyyy-MM-dd HH:mm'">
-          {{eventCard.endDate.date | date: 'dd.MM.yyyy HH:mm'}}
-        </time>
-      </span>
-    </mat-card-actions>
-  </mat-card>
+  <bjk-event-card class="event-card" *ngFor="let eventCard of events;" [card]="eventCard"></bjk-event-card>
 </ng-container>
