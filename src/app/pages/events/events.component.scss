@@ -38,3 +38,9 @@
 .fill-remaining-width {
   flex: 1 1 auto;
 }
+
+.event-date {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
