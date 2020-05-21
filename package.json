@@ -57,7 +57,7 @@
     "@angular-devkit/build-angular": "~0.803.8",
     "@angular/cli": "~8.3.8",
     "@angular/compiler-cli": "~8.2.5",
-    "@angular/language-service": "~8.2.5",
+    "@angular/language-service": "~9.1.9",
     "@nativescript/schematics": "~0.7.0",
     "@nativescript/tslint-rules": "~0.0.2",
     "@types/jasmine": "~3.3.8",
